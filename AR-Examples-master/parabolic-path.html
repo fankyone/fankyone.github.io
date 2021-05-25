@@ -20,7 +20,9 @@
   Example created by Lee Stemkoski: https://github.com/stemkoski
   Based on the AR.js library and examples created by Jerome Etienne: https://github.com/jeromeetienne/AR.js/
 -->
-
+<button type="button" onclick="parabolicPath">
+	點擊我
+</button>
 
 <script>
 
@@ -195,6 +197,11 @@ function update()
 
 // create a function p() that passes through the points (0,p0), (1,p1), (2,p2) 
 //  and evaluate that function at time t.
+
+
+
+
+
 function parabolaEvaluate(p0, p1, p2, t)
 {
 	return ( 0.5*(p0 - 2*p1 + p2) )*t*t + ( -0.5*(3*p0 - 4*p1 + p2) )*t + ( p0 );
