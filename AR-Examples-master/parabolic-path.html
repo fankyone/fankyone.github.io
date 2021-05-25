@@ -22,7 +22,7 @@
   Based on the AR.js library and examples created by Jerome Etienne: https://github.com/jeromeetienne/AR.js/
 -->
 <button onclick="clickme()">
-	clickme4
+	clickme1
 </button>
 <p id ="demo"></p> 
 
@@ -214,8 +214,8 @@ function update()
 		let p = parabolicPath( markerRootA.getWorldPosition(), markerRootB.getWorldPosition(), (totalTime/1) % 4 - 1 );
 		ballMesh.position.copy( p );
 		ballMesh.rotation.z += 0.1
-		ballButton=false;
 		}
+		ballButton=false;
 	}
 }
 
