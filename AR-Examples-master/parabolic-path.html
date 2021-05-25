@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <head>
+	<meta charset="utf-8"></meta>​
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<title>Hello, world!</title>
 	<!-- include three.js library -->
@@ -12,6 +13,7 @@
 	<script src="threex/threex-artoolkitcontext.js"></script>
 	<script src="threex/threex-arbasecontrols.js"></script>
 	<script src="threex/threex-armarkercontrols.js"></script>
+	<script src="javascript"></script>​
 </head>
 
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
@@ -20,10 +22,14 @@
   Example created by Lee Stemkoski: https://github.com/stemkoski
   Based on the AR.js library and examples created by Jerome Etienne: https://github.com/jeromeetienne/AR.js/
 -->
-
-<button type="button" onclick="clickme()">
-	點擊我
+<button onclick="clickme()">
+	clickme
 </button>
+<p id ="demo"></p> 
+
+
+
+
 <script>
 
 var scene, camera, renderer, clock, deltaTime, totalTime;
@@ -34,8 +40,24 @@ var markerRoot1;
 
 var material1, mesh1;
 
+var ballButton;
+
 initialize();
 animate();
+
+
+function clickme()
+{
+	ballButton = true;
+	console.log("Hello World");
+	var text1="Hello";
+	var text2="Interest Citizens!";
+	var text3= text1 + text2;
+	document.getElementById("demo").innerHTML = text3;
+}
+
+
+
 
 function initialize()
 {
@@ -51,13 +73,14 @@ function initialize()
 	renderer.setClearColor(new THREE.Color('lightgrey'), 0)
 	renderer.setSize( 640, 480 );
 	renderer.domElement.style.position = 'absolute'
-	renderer.domElement.style.top = '0px'
-	renderer.domElement.style.left = '0px'
+	renderer.domElement.style.top = '150px'
+	renderer.domElement.style.left = '150px'
 	document.body.appendChild( renderer.domElement );
 
 	clock = new THREE.Clock();
 	deltaTime = 0;
 	totalTime = 0;
+	
 	
 	////////////////////////////////////////////////////////////
 	// setup arToolkitSource
@@ -180,7 +203,7 @@ function update()
 	// update artoolkit on every frame
 	if ( arToolkitSource.ready !== false )
 		arToolkitContext.update( arToolkitSource.domElement );
-
+	
 	if ( markerRootA.visible && markerRootB.visible )
 	{
 		// align clipping plane to scene.
@@ -188,10 +211,11 @@ function update()
 			new THREE.Vector3(0,1,0).applyQuaternion(sceneGroup.getWorldQuaternion()),
 			sceneGroup.getWorldPosition()
 		);
-		
+		if(ballButton){
 		let p = parabolicPath( markerRootA.getWorldPosition(), markerRootB.getWorldPosition(), (totalTime/1) % 4 - 1 );
 		ballMesh.position.copy( p );
 		ballMesh.rotation.z += 0.1
+		}
 	}
 }
 
@@ -228,7 +252,6 @@ function animate()
 }
 
 </script>
-
 
 
 
