@@ -22,7 +22,7 @@
   Based on the AR.js library and examples created by Jerome Etienne: https://github.com/jeromeetienne/AR.js/
 -->
 <button onclick="clickme()">
-	clickme1
+	clickme2
 </button>
 
 <script>
@@ -35,7 +35,7 @@ var markerRoot1;
 
 var material1, mesh1;
 
-var ballButton;
+var ballButton= false;
 
 initialize();
 animate();
@@ -44,8 +44,6 @@ animate();
 function clickme()
 {
 	ballButton = true;
-    ballButton=false;
-	return 0;
 }
 
 
