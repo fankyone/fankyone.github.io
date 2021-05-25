@@ -214,6 +214,7 @@ function update()
 		let p = parabolicPath( markerRootA.getWorldPosition(), markerRootB.getWorldPosition(), (totalTime/1) % 4 - 1 );
 		ballMesh.position.copy( p );
 		ballMesh.rotation.z += 0.1
+		ballButton=false;
 		}
 	}
 }
