@@ -22,7 +22,7 @@
   Based on the AR.js library and examples created by Jerome Etienne: https://github.com/jeromeetienne/AR.js/
 -->
 <button onclick="clickme()">
-	clickme4
+	clickme1
 </button>
 
 <script>
@@ -45,10 +45,12 @@ animate();
 
 function clickme()
 {
+	if( totalTime >= 4)
+	{
 	ballButton = true;
 	timepass = 0;
 	totalTime = 0;
-	
+	}
 }
 
 
