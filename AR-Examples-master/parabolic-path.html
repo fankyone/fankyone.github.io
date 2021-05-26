@@ -22,7 +22,7 @@
   Based on the AR.js library and examples created by Jerome Etienne: https://github.com/jeromeetienne/AR.js/
 -->
 <button onclick="clickme()">
-	clickme3
+	clickme2
 </button>
 
 <script>
@@ -44,6 +44,7 @@ animate();
 function clickme()
 {
 	ballButton = true;
+	return 0;
 }
 
 
@@ -191,8 +192,8 @@ function initialize()
 function update()
 {
 	// update artoolkit on every frame
-	if ( arToolkitSource.ready !== false )
-		arToolkitContext.update( arToolkitSource.domElement );
+	//if ( arToolkitSource.ready !== false )
+		//arToolkitContext.update( arToolkitSource.domElement );
 	
 	if ( markerRootA.visible && markerRootB.visible )
 	{
@@ -207,6 +208,7 @@ function update()
 		ballMesh.rotation.z += 0.1
 		}
 	}
+	ballButton=false;
 }
 
 
@@ -237,7 +239,7 @@ function animate()
 {
 	requestAnimationFrame(animate);
 	deltaTime = clock.getDelta();
-	totalTime += deltaTime*2;
+	totalTime += deltaTime;
 	update();
 	render();
 }
