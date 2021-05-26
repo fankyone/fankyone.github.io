@@ -22,7 +22,7 @@
   Based on the AR.js library and examples created by Jerome Etienne: https://github.com/jeromeetienne/AR.js/
 -->
 <button onclick="clickme()">
-	clickme2
+	clickme3
 </button>
 
 <script>
@@ -191,8 +191,8 @@ function initialize()
 function update()
 {
 	// update artoolkit on every frame
-	//if ( arToolkitSource.ready !== false )
-		//arToolkitContext.update( arToolkitSource.domElement );
+	if ( arToolkitSource.ready !== false )
+		arToolkitContext.update( arToolkitSource.domElement );
 	
 	if ( markerRootA.visible && markerRootB.visible )
 	{
