@@ -22,7 +22,7 @@
   Based on the AR.js library and examples created by Jerome Etienne: https://github.com/jeromeetienne/AR.js/
 -->
 <button onclick="clickme()">
-	clickme1
+	clickme3
 </button>
 
 <script>
@@ -37,6 +37,8 @@ var material1, mesh1;
 
 var ballButton= false;
 
+var	timepass = 0;
+
 initialize();
 animate();
 
@@ -44,6 +46,7 @@ animate();
 function clickme()
 {
 	ballButton = true;
+	timepass = 0;
 }
 
 
@@ -70,7 +73,7 @@ function initialize()
 	clock = new THREE.Clock();
 	deltaTime = 0;
 	totalTime = 0;
-	
+
 	
 	////////////////////////////////////////////////////////////
 	// setup arToolkitSource
@@ -205,11 +208,16 @@ function update()
 		let p = parabolicPath( markerRootA.getWorldPosition(), markerRootB.getWorldPosition(), (totalTime/1) % 4 - 1 );
 		ballMesh.position.copy( p );
 		ballMesh.rotation.z += 0.1
-
+		
+		if (timepass >= 2000)
+		{
+			ballButton = false;
+		}
 	}
-	ballButton=false;
+	
+	
 }
-
+	
 
 // create a function p() that passes through the points (0,p0), (1,p1), (2,p2) 
 //  and evaluate that function at time t.
@@ -241,6 +249,7 @@ function animate()
 	totalTime += deltaTime;
 	update();
 	render();
+	timepass += deltatime;
 }
 </script>
 
