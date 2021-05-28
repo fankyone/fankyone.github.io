@@ -22,7 +22,7 @@
   Based on the AR.js library and examples created by Jerome Etienne: https://github.com/jeromeetienne/AR.js/
 -->
 <button onclick="clickme()">
-	clickme6
+	clickme5
 </button>
 
 
@@ -41,18 +41,30 @@ initialize();
 animate();
 
 
-var pushButton = 2;
-
+var pushButton = 1;
+let skyMesh
 
 
 function clickme()
 {
-	pushBotton = pushButton++;
+	pushButton++;
 	if(pushButton > 2){
-		pushButton = pushButton % 2 ;
+		pushButton = 1;
+	}
+	
+	if(pushBotton = 1){
+		skyMesh = new THREE.Mesh
+		(new THREE.CubeGeometry(30,30,30),
+		skyMaterialArray1
+		);
+	}
+	else if(pushBotton = 2){
+		skyMesh = new THREE.Mesh
+		(new THREE.CubeGeometry(30,30,30),
+		skyMaterialArray2
+		);
 	}
 }
-
 
 
 function initialize()
@@ -221,11 +233,12 @@ function initialize()
 	//宣告正方體
 	
 	
-	/*let skyMesh = new THREE.Mesh
+	let skyMesh = new THREE.Mesh
 		(new THREE.CubeGeometry(30,30,30),
 		skyMaterialArray1
 		);
-	*/
+	
+	/*
 	let skyMesh
 	if(pushBotton = 1){
 		skyMesh = new THREE.Mesh
@@ -239,17 +252,19 @@ function initialize()
 		skyMaterialArray2
 		);
 	}
+	*/
 	/*
 	let skyMesh = new THREE.CubeGeometry(30,30,30);
+	console.log(skyMesh);
 	
-	if(pushButton == 1){
+	//if(pushButton == 1){
 	new THREE.Mesh(skyMesh,skyMaterialArray1);
-	}
-	
-	else if(pushBotton == 2){
-	new THREE.Mesh(skymesh,skyMaterialArray2);
-	}
+	//}
 	*/
+	//else if(pushBotton == 2){
+	//new THREE.Mesh(skymesh,skyMaterialArray2);
+	//}
+	//
 	skyMesh.layers.set(2);
 	smoothedRoot.add(skyMesh);
 	
