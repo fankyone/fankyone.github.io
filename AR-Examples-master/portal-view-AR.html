@@ -23,7 +23,7 @@
 -->
 
 <button onclick="clickme()">
-	clickme2
+	clickme5
 </button>
 
 
@@ -210,9 +210,12 @@ function initialize()
 	}
 	//宣告正方體
 	
-	let skyMesh = new THREE.Mesh(
+	let skyMesh1 = new THREE.Mesh(
 		new THREE.CubeGeometry(30,30,30),
 		skyMaterialArray1 );
+		
+	skyMesh1.layers.set(2);
+	smoothedRoot.add(skyMesh1);
 		
 //--------------------------------------------------------------------------------------------------------------------------
 		
@@ -229,14 +232,14 @@ function initialize()
 	}
 	//宣告正方體
 	
-	let skyMesh = new THREE.Mesh(
+	let skyMesh2 = new THREE.Mesh(
 		new THREE.CubeGeometry(30,30,30),
 		skyMaterialArray2 );
 		
 		
 		
-	skyMesh.layers.set(2);
-	smoothedRoot.add(skyMesh);
+	skyMesh2.layers.set(2);
+	smoothedRoot.add(skyMesh2);
 
 }
 
