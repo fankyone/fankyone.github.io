@@ -22,7 +22,7 @@
   Based on the AR.js library and examples created by Jerome Etienne: https://github.com/jeromeetienne/AR.js/
 -->
 <button onclick="clickme()">
-	clickme3
+	clickme1
 </button>
 
 
@@ -37,7 +37,7 @@ var markerRoot1, markerRoot2;
 
 var portal, portalMaterial;
 
-
+let loader = new THREE.TextureLoader();
 
 let skyMaterialArray1 = [
 		new THREE.MeshBasicMaterial( { map: loader.load("images/mountain/posx.jpg"), side: THREE.BackSide } ),
@@ -186,7 +186,7 @@ function initialize()
 	// setup scene
 	////////////////////////////////////////////////////////////
 	
-	let loader = new THREE.TextureLoader();
+
 	
 	// material for portal 框架的材質 (for debugging)
 	
