@@ -22,7 +22,7 @@
   Based on the AR.js library and examples created by Jerome Etienne: https://github.com/jeromeetienne/AR.js/
 -->
 <button onclick="clickme()">
-	clickme2
+	clickme3
 </button>
 
 
@@ -37,14 +37,8 @@ var markerRoot1, markerRoot2;
 
 var portal, portalMaterial;
 
-initialize();
-animate();
 
 
-var pushButton = 1;
-let skyMesh
-
-    
 let skyMaterialArray1 = [
 		new THREE.MeshBasicMaterial( { map: loader.load("images/mountain/posx.jpg"), side: THREE.BackSide } ),
 		new THREE.MeshBasicMaterial( { map: loader.load("images/mountain/negx.jpg"), side: THREE.BackSide } ),
@@ -62,6 +56,14 @@ let skyMaterialArray2 = [
 		new THREE.MeshBasicMaterial( { map: loader.load("images/Antartica/posz.jpg"), side: THREE.BackSide } ),
 		new THREE.MeshBasicMaterial( { map: loader.load("images/Antartica/negz.jpg"), side: THREE.BackSide } ),
 	];
+	
+	
+initialize();
+animate();
+
+
+var pushButton = 1;
+let skyMesh
 
 	
 function clickme()
