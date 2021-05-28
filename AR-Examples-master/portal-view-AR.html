@@ -24,7 +24,7 @@
 
 
 <button onclick="clickme()">
-	clickme4
+	clickme3
 </button>
 
 
@@ -42,21 +42,21 @@ var portal, portalMaterial;
 var loader = new THREE.TextureLoader();
 
 var skyMaterialArray1 = [
-		new THREE.MeshBasicMaterial( { map: loader.load("images/mountain/posx.jpg"), side: THREE.BackSide } ),
-		new THREE.MeshBasicMaterial( { map: loader.load("images/mountain/negx.jpg"), side: THREE.BackSide } ),
-		new THREE.MeshBasicMaterial( { map: loader.load("images/mountain/posy.jpg"), side: THREE.BackSide } ),
-		new THREE.MeshBasicMaterial( { map: loader.load("images/mountain/negy.jpg"), side: THREE.BackSide } ),
-		new THREE.MeshBasicMaterial( { map: loader.load("images/mountain/posz.jpg"), side: THREE.BackSide } ),
-		new THREE.MeshBasicMaterial( { map: loader.load("images/mountain/negz.jpg"), side: THREE.BackSide } ),
+		new THREE.MeshBasicMaterial( { map: loader.load("images/mountain/posx.jpg"), side: THREE.DoubleSide } ),
+		new THREE.MeshBasicMaterial( { map: loader.load("images/mountain/negx.jpg"), side: THREE.DoubleSide } ),
+		new THREE.MeshBasicMaterial( { map: loader.load("images/mountain/posy.jpg"), side: THREE.DoubleSide } ),
+		new THREE.MeshBasicMaterial( { map: loader.load("images/mountain/negy.jpg"), side: THREE.DoubleSide } ),
+		new THREE.MeshBasicMaterial( { map: loader.load("images/mountain/posz.jpg"), side: THREE.DoubleSide } ),
+		new THREE.MeshBasicMaterial( { map: loader.load("images/mountain/negz.jpg"), side: THREE.DoubleSide } ),
 	];
 	
 var skyMaterialArray2 = [
-		new THREE.MeshBasicMaterial( { map: loader.load("images/Antartica/posx.jpg"), side: THREE.BackSide } ),
-		new THREE.MeshBasicMaterial( { map: loader.load("images/Antartica/negx.jpg"), side: THREE.BackSide } ),
-		new THREE.MeshBasicMaterial( { map: loader.load("images/Antartica/posy.jpg"), side: THREE.BackSide } ),
-		new THREE.MeshBasicMaterial( { map: loader.load("images/Antartica/negy.jpg"), side: THREE.BackSide } ),
-		new THREE.MeshBasicMaterial( { map: loader.load("images/Antartica/posz.jpg"), side: THREE.BackSide } ),
-		new THREE.MeshBasicMaterial( { map: loader.load("images/Antartica/negz.jpg"), side: THREE.BackSide } ),
+		new THREE.MeshBasicMaterial( { map: loader.load("images/Antartica/posx.jpg"), side: THREE.DoubleSide } ),
+		new THREE.MeshBasicMaterial( { map: loader.load("images/Antartica/negx.jpg"), side: THREE.DoubleSide } ),
+		new THREE.MeshBasicMaterial( { map: loader.load("images/Antartica/posy.jpg"), side: THREE.DoubleSide } ),
+		new THREE.MeshBasicMaterial( { map: loader.load("images/Antartica/negy.jpg"), side: THREE.DoubleSide } ),
+		new THREE.MeshBasicMaterial( { map: loader.load("images/Antartica/posz.jpg"), side: THREE.DoubleSide } ),
+		new THREE.MeshBasicMaterial( { map: loader.load("images/Antartica/negz.jpg"), side: THREE.DoubleSide } ),
 	];
 	
 initialize();
@@ -76,7 +76,7 @@ function clickme()
 	console.log(pushButton);
 	
 	if(pushBotton = 1){
-		skyMesh.material = new THREE.MeshBasicMaterial( { color: 0xff009999 } );
+		skyMesh.material = new THREE.MeshBasicMaterial( { color: 0xdd00ff , side:THREE.DoubleSide,} );
 	}
 	else if(pushBotton = 2){
 		skyMesh.material = new THREE.MeshBasicMaterial( { map: loader.load("images/Antartica/negz.jpg"), side: THREE.BackSide } );
