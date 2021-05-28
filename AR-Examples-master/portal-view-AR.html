@@ -21,8 +21,10 @@
   Example created by Lee Stemkoski: https://github.com/stemkoski
   Based on the AR.js library and examples created by Jerome Etienne: https://github.com/jeromeetienne/AR.js/
 -->
+
+
 <button onclick="clickme()">
-	clickme1
+	clickme2
 </button>
 
 
@@ -39,7 +41,7 @@ var portal, portalMaterial;
 
 let loader = new THREE.TextureLoader();
 
-let skyMaterialArray1 = [
+var skyMaterialArray1 = [
 		new THREE.MeshBasicMaterial( { map: loader.load("images/mountain/posx.jpg"), side: THREE.BackSide } ),
 		new THREE.MeshBasicMaterial( { map: loader.load("images/mountain/negx.jpg"), side: THREE.BackSide } ),
 		new THREE.MeshBasicMaterial( { map: loader.load("images/mountain/posy.jpg"), side: THREE.BackSide } ),
@@ -48,7 +50,7 @@ let skyMaterialArray1 = [
 		new THREE.MeshBasicMaterial( { map: loader.load("images/mountain/negz.jpg"), side: THREE.BackSide } ),
 	];
 	
-let skyMaterialArray2 = [
+var skyMaterialArray2 = [
 		new THREE.MeshBasicMaterial( { map: loader.load("images/Antartica/posx.jpg"), side: THREE.BackSide } ),
 		new THREE.MeshBasicMaterial( { map: loader.load("images/Antartica/negx.jpg"), side: THREE.BackSide } ),
 		new THREE.MeshBasicMaterial( { map: loader.load("images/Antartica/posy.jpg"), side: THREE.BackSide } ),
@@ -68,6 +70,7 @@ let skyMesh
 	
 function clickme()
 {
+	console.log('Click');
 	pushButton++;
 	if(pushButton > 2){
 		pushButton = 1;
