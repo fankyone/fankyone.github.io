@@ -22,7 +22,7 @@
   Based on the AR.js library and examples created by Jerome Etienne: https://github.com/jeromeetienne/AR.js/
 -->
 <button onclick="clickme()">
-	clickme4
+	clickme3
 </button>
 
 
@@ -41,13 +41,13 @@ initialize();
 animate();
 
 
-var pushButton = 0;
+let pushButton = 1;
 
 
 
 function clickme()
 {
-	pushButton++;
+	pushButton = pushButton++;
 	if(pushButton > 2){
 		pushButton = pushButton % 2 ;
 	}
