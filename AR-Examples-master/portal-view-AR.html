@@ -24,7 +24,7 @@
 
 
 <button onclick="clickme()">
-	clickme10
+	clickme9
 </button>
 
 
@@ -59,15 +59,11 @@ var skyMaterialArray2 = [
 		new THREE.MeshBasicMaterial( { map: loader.load("images/Antartica/negz.jpg"), side: THREE.BackSide } ),
 	];
 	
-	
 initialize();
 animate();
-
-
 var pushButton = 1;
 var skyMesh;
 
-	
 function clickme()
 {
 	console.log('Click');
@@ -75,21 +71,12 @@ function clickme()
 	if(pushButton > 2){
 		pushButton = 1;
 	}
-	
 	if(pushBotton = 1){
-		skyMesh = new THREE.Mesh
-		(new THREE.CubeGeometry(30,30,30),
-		skyMaterialArray1
-		);
+		skyMesh.material = skyMaterialArray1;
 	}
 	else if(pushBotton = 2){
-		skyMesh = new THREE.Mesh
-		(new THREE.CubeGeometry(30,30,30),
-		skyMaterialArray2
-		);
+		skyMesh.material = skyMaterialArray2;
 	}
-	skyMesh.layers.set(2);
-	smoothedRoot.add(skyMesh);
 }
 
 
