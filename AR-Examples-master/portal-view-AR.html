@@ -24,7 +24,7 @@
 
 
 <button onclick="clickme()">
-	clickme2
+	clickme5
 </button>
 
 
@@ -39,7 +39,7 @@ var markerRoot1, markerRoot2;
 
 var portal, portalMaterial;
 
-let loader = new THREE.TextureLoader();
+var loader = new THREE.TextureLoader();
 
 var skyMaterialArray1 = [
 		new THREE.MeshBasicMaterial( { map: loader.load("images/mountain/posx.jpg"), side: THREE.BackSide } ),
@@ -65,7 +65,7 @@ animate();
 
 
 var pushButton = 1;
-let skyMesh
+var skyMesh;
 
 	
 function clickme()
