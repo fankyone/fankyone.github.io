@@ -24,7 +24,7 @@
 
 
 <button onclick="clickme()">
-	clickme7
+	clickme6
 </button>
 
 
@@ -66,11 +66,15 @@ var skyMesh;
 
 function clickme()
 {
-	console.log('Click');
+
 	pushButton++;
+	
 	if(pushButton > 2){
 		pushButton = 1;
 	}
+	
+	console.log(pushButton);
+	
 	if(pushBotton = 1){
 		skyMesh.material = new THREE.MeshBasicMaterial( { color: 0xffffff } );;
 	}
