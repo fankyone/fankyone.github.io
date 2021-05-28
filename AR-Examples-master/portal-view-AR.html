@@ -22,7 +22,7 @@
   Based on the AR.js library and examples created by Jerome Etienne: https://github.com/jeromeetienne/AR.js/
 -->
 <button onclick="clickme()">
-	clickme5
+	clickme3
 </button>
 
 
@@ -41,7 +41,7 @@ initialize();
 animate();
 
 
-var pushButton = 1;
+var pushButton;
 
 
 
@@ -228,14 +228,14 @@ function initialize()
 	*/
 	let skyMesh = new THREE.CubeGeometry(30,30,30);
 	
-	if(pushButton == 1){
+	//if(pushButton == 1){
 	new THREE.Mesh(skymesh,skyMaterialArray1);
-	}
-	
+	//}
+	/*
 	else if(pushBotton == 2){
 	new THREE.Mesh(skymesh,skyMaterialArray2);
 	}
-	
+	*/
 	skyMesh.layers.set(2);
 	smoothedRoot.add(skyMesh);
 	
