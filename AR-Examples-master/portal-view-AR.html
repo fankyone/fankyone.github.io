@@ -24,7 +24,7 @@
 
 
 <button onclick="clickme()">
-	clickme3
+	clickme2
 </button>
 
 
@@ -79,7 +79,7 @@ function clickme()
 		skyMesh.material = new THREE.MeshBasicMaterial( { color: 0xdd00ff , side:THREE.DoubleSide,} );
 	}
 	else if(pushBotton = 2){
-		skyMesh.material = new THREE.MeshBasicMaterial( { map: loader.load("images/Antartica/negz.jpg"), side: THREE.BackSide } );
+		skyMesh.material = new THREE.MeshBasicMaterial( { map: loader.load("images/Antartica/negz.jpg"), side: THREE.DoubleSide } );
 	}
 }
 
