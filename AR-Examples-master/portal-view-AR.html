@@ -43,18 +43,12 @@
 	cursor: pointer;
 	}
 
-	.instructions {
-    position: fixed;
-    top: 5%;
-    font-size: 1.25em;
-    color: white;
-    z-index: 999999;
-	}
 	</style>
 </head>
 
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
 <div id="renderbody"> </div>
+
 <div class="centered">
     <button class="button" onclick="clickme()">?</button>
 	</div>
@@ -138,7 +132,7 @@ function initialize()
 	renderer.domElement.style.top = '0px'
 	renderer.domElement.style.left = '0px'
 	document.getElementById("renderbody").appendChild( renderer.domElement );
-	//document.body.appendChild( renderer.domElement );
+	//document.appendChild( renderer.domElement );
 
 	clock = new THREE.Clock();
 	deltaTime = 0;
