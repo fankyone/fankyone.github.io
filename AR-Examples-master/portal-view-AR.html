@@ -54,7 +54,7 @@
 </head>
 
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
-
+<div id="renderbody"> </div>
 <div class="centered">
     <button class="button" onclick="clickme()">?</button>
 	</div>
@@ -137,7 +137,8 @@ function initialize()
 	renderer.domElement.style.position = 'absolute'
 	renderer.domElement.style.top = '0px'
 	renderer.domElement.style.left = '0px'
-	document.body.appendChild( renderer.domElement );
+	document.getElementById("renderbody").appendChild( renderer.domElement );
+	//document.body.appendChild( renderer.domElement );
 
 	clock = new THREE.Clock();
 	deltaTime = 0;
